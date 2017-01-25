@@ -1,0 +1,25 @@
+Navigating Files and Directories:
+
+Absolute vs Relative Paths
+1. No
+2. No
+3. No 
+4. No
+5. Yes
+6. No
+7. Yes 
+8. Yes
+9. Yes
+Relative Path Resolution
+Number 4 is correct.
+
+ls Reading Comprehension
+Both 2 and 3 are correct, so 4 is the answer.
+
+Exploring More ls Arguments
+The argument -l, when used with the ls command, displays additional information with the file and directory names, such as file size. The argument -h makes the file size more easily readable for humans.
+
+Listing Recursively and By Time
+ls -r -t would organize the the directories in alphabetical order, and the files and directories within the directories would be sorted from most recently changed to the least recently changed.
+
+
