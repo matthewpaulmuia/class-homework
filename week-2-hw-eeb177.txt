@@ -1,0 +1,183 @@
+Question 1:
+Order
+Rodentia
+Rodentia
+Rodentia
+Macroscelidea
+Rodentia
+
+Question 2:
+There are 152 unique families.
+
+Tarsiidae
+Daubentoniidae
+Procyonidae
+Ursidae
+Capromyidae
+Prionodontidae
+Didelphidae
+Calomyscidae
+Anomaluridae
+Cercopithecidae
+Pteropodidae
+Myrmecobiidae
+Megalonychidae
+Rhinolophidae
+Eupleridae
+Potoroidae
+Gliridae
+Mormoopidae
+Suidae
+Cheirogaleidae
+Bathyergidae
+Mystacinidae
+Tenrecidae
+Ziphiidae
+Tupaiidae
+Pedetidae
+Physeteridae
+Mephitidae
+Mustelidae
+Hominidae
+Hypsiprymnodontidae
+Atelidae
+Burramyidae
+Tapiridae
+Myocastoridae
+Lepilemuridae
+Hystricidae
+Cynocephalidae
+Ctenodactylidae
+Phascolarctidae
+Nandiniidae
+Trichechidae
+Phyllostomidae
+Pitheciidae
+Soricidae
+Tragulidae
+Lorisidae
+Natalidae
+Petauridae
+Thryonomyidae
+Canidae
+Equidae
+Craseonycteridae
+Microbiotheriidae
+Caviidae
+Dasyuridae
+Lemuridae
+Aplodontiidae
+Caenolestidae
+Pseudocheiridae
+Bradypodidae
+Bovidae
+Octodontidae
+Camelidae
+Dasyproctidae
+Hylobatidae
+Myzopodidae
+Indriidae
+Thylacomyidae
+Tarsipedidae
+Noctilionidae
+Sciuridae
+Spalacidae
+Iniidae
+Peramelidae
+Odobenidae
+Vombatidae
+Antilocapridae
+Otariidae
+Megadermatidae
+Platanistidae
+Notoryctidae
+Erinaceidae
+Ailuridae
+Giraffidae
+Balaenidae
+Cyclopedidae
+Molossidae
+Myrmecophagidae
+Moschidae
+Galagidae
+Elephantidae
+Echimyidae
+Ctenomyidae
+Phocoenidae
+Orycteropodidae
+Dasypodidae
+Echimydae
+Rhinocerotidae
+Herpestidae
+Nesomyidae
+Tayassuidae
+Castoridae
+Delphinidae
+Nycteridae
+Procaviidae
+Heteromyidae
+Manidae
+Furipteridae
+Ornithorhynchidae
+Phalangeridae
+Abrocomidae
+Ochotonidae
+Erethizontidae
+Viverridae
+Leporidae
+Diatomyidae
+Vespertilionidae
+Chrysochloridae
+Emballonuridae
+Petromuridae
+Balaenopteridae
+Geomyidae
+Hipposideridae
+Thyropteridae
+Callitrichidae
+Acrobatidae
+Rhinopomatidae
+Felidae
+Cuniculidae
+Chinchillidae
+Tachyglossidae
+Dugongidae
+Muridae
+Platacanthomyidae
+Hyaenidae
+Aotidae
+Cebidae
+Dinomyidae
+Dipodidae
+Neobalaenidae
+Monodontidae
+Macropodidae
+Macroscelididae
+Ptilocercidae
+Hippopotamidae
+Talpidae
+Phocidae
+Solenodontidae
+Cervidae
+Cricetidae
+Eschrichtiidae
+
+Question 3: 
+  504  echo 'aaaabbb' | tr 'a' 'b'
+  505  echo '123456789' | tr 1-5 0
+  506  echo 'ACtGGcAaTT' | tr actg ACTG
+  507  echo 'ACtGGcAaTT' | tr [:lower:] [:upper:]
+  508  echo "aabbccddee | tr a-c 1-3
+echo "aabbccddee" | tr a-c 1-3
+  509  echo "aabbccddee" | tr a-c 1-3
+  510  echo 'aaaaabbbb' | tr -d a
+  511  echo 'aaaaabbbb' | tr -s a
+  512  ls
+  513  cd ..
+  514  cd sandbox/
+  515  tail -n 2 ../data/Pacifici2013_data.csv | cut -d ';' -f 2-6 | tr -s ';' ' ' | sort -r -n -k 6 > BodyM.csv
+  516  history 50
+  517  history 12 >> ~/Desktop/eeb-177/class-homework/week-2-hw-eeb177.txt 
+  518  history 15 >> ~/Desktop/eeb-177/class-homework/week-2-hw-eeb177.txt
+
+Question 4: 

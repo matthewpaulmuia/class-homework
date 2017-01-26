@@ -22,4 +22,3 @@ The argument -l, when used with the ls command, displays additional information 
 Listing Recursively and By Time
 ls -r -t would organize the the directories in alphabetical order, and the files and directories within the directories would be sorted from most recently changed to the least recently changed.
 
-
