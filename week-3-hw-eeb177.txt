@@ -1,0 +1,27 @@
+Question 1:
+1. Individual 3's levels were recorded 61 times and individual 27's levels were recorded 5 times.
+
+2. The sciprt is called Gesquiere2011_data-script1.sh.
+The text file contained:
+#!/bin/bash
+
+cut -f 1 $1 | grep $2 -w | wc -l
+Some tests reulted in:
+  760  bash Gesquiere2011_data-script1.sh ~/CSB/unix/data/Gesquiere2011_data.csv 4
+46
+  761  bash Gesquiere2011_data-script1.sh ~/CSB/unix/data/Gesquiere2011_data.csv 3
+61
+  762  bash Gesquiere2011_data-script1.sh ~/CSB/unix/data/Gesquiere2011_data.csv 27
+5
+
+3.
+
+
+Question 2:
+1. 
+
+2.
+
+3.
+
+ 
