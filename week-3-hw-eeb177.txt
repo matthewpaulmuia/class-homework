@@ -6,6 +6,7 @@ The text file contained:
 #!/bin/bash
 
 cut -f 1 $1 | grep $2 -w | wc -l
+
 Some tests reulted in:
   760  bash Gesquiere2011_data-script1.sh ~/CSB/unix/data/Gesquiere2011_data.csv 4
 46
@@ -14,14 +15,34 @@ Some tests reulted in:
   762  bash Gesquiere2011_data-script1.sh ~/CSB/unix/data/Gesquiere2011_data.csv 27
 5
 
-3.
+3. The script is called Gesquiere2011_data-script2.sh.
+The text files contained:
+#! /bin/bash
+
+cut -f 1 $1 | tail -n +2 | uniq -c
 
 
 Question 2:
-1. 
+1. The script I wrote reads:
+#! /bin/bash
 
-2.
+echo "File Name: ~/CSB/unix/data/Saavedra2013/$1"
+echo "Number of rows: "
+wc -l ~/CSB/unix/data/Saavedra2013/$1
+echo "Number of columns: "
+head -n 1 ~/CSB/unix/data/Saavedra2013/$1 | wc -w
 
-3.
+2. The script I wrote reads:
+#! /bin/bash
+
+for file in ~/CSB/unix/data/Saavedra2013/*.txt
+		do wc -l $file
+	done
+
+for file in ~/CSB/unix/data/Saavedra2013/*.txt
+		do head -1 $file | tr '|' '\n' | wc -w
+	done
+
+3. The file titled "n58.txt" had the most rows at 678. The file titled "n56.txt" had the most columns at 207.
 
  
