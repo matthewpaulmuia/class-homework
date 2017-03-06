@@ -5,3 +5,149 @@ date: "March 4, 2017"
 output: html_document
 ---
 
+## Part 1: Canids Continued
+# Report on output
+# 1. What taxonomic group is displayed?
+#
+# 2. How many unique fossil species are contained within it?
+#
+# 3. How many unique fossil genera?
+#
+# 4. What species has the longest
+#
+
+
+## Part 2: Data Frames
+# Exploring Data Frames
+# Exercise #1
+```{r}
+df <- data.frame(first = c('Matthew'),
+                 last = c('Muia'),
+                 lucky_number = c(513),
+                 stringsAsFactors = FALSE)
+df <- rbind(df, list('Kelsey', 'Bowers', 213) )
+df <- cbind(df, coffeetime = c(TRUE,F))
+df
+```
+
+# Exercise #2
+```{r}
+download.file("https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder-FiveYearData.csv", destfile = "data/gapminder-FiveYearData.csv")
+gapminder <- read.csv(file = "data/gapminder-FiveYearData.csv")
+source(file = "scripts/load-gapminder.R")
+```
+
+# Exercise #3
+The object gapminder is a data frame with columns
+- country and continent are factors.
+- year is an integer vector.
+- pop, lifeExp, and gdpPercap are numeric vectors.
+
+# Subsetting Data
+# Exercise #1
+```{r}
+x <- c(5.4, 6.2, 7.1, 4.8, 7.5)
+names(x) <- c('a', 'b', 'c', 'd', 'e')
+print(x)
+x[2:4]
+x[-c(1,5)]
+x[c(2,3,4)]
+```
+
+# Exercise #2
+```{r}
+x <- c(5.4, 6.2, 7.1, 4.8, 7.5)
+names(x) <- c('a', 'b', 'c', 'd', 'e')
+print(x)
+# a and c are correct
+```
+
+# Exercise #3
+```{r}
+x <- c(5.4, 6.2, 7.1, 4.8, 7.5)
+names(x) <- c('a', 'b', 'c', 'd', 'e')
+print(x)
+x_subset <- x[x<7 & x>4]
+print(x_subset)
+```
+
+# Exercise #4
+```{r}
+m <- matrix(1:18, nrow=3, ncol=6)
+print(m)
+# answer D
+m[2,c(4,5)]
+```
+
+# Exercise #5
+```{r}
+xlist <- list(a = "Software Carpentry", b = 1:10, data = head(iris))
+xlist$b[2]
+```
+
+# Exercise #6
+```{r}
+mod <- aov(pop ~ lifeExp, data=gapminder)
+attributes(mod)
+mod$df.residual
+```
+
+# Exercise #7
+```{r}
+#1
+gapminder[gapminder$year == 1957,]
+
+#2
+gapminder[,-c(1:4)]
+
+#3
+gapminder[gapminder$lifeExp > 80,]
+
+#4
+gapminder[1, c(4, 5)]
+
+#5
+gapminder[gapminder$year == 2002 | gapminder$year == 2007,]
+ gapminder[gapminder$year %in% c(2002, 2007),]
+
+```
+
+# Exercise #8
+```{r}
+#1
+# gapminder is a data.frame so needs to be subsetted on two dimensions. gapminder[1:20, ] subsets the data to give the first 20 rows and all columns.
+
+#2
+gapminder_small <- gapminder[c(1:9, 19:23),]
+```
+
+# Creating Publication-Quality Graphs
+# Exercise #1
+```{r}
+ggplot(data = gapminder, aes(x = year, y = lifeExp)) + geom_point()
+```
+
+# Exercise #2
+```{r}
+ggplot(data = gapminder, aes(x = year, y = lifeExp, color=continent)) + geom_point()
+```
+
+# Exercise #3
+```{r}
+ggplot(data = gapminder, aes(x=year, y=lifeExp, by=country)) + geom_point() + geom_line(aes(color=continent))
+```
+
+# Exercise #4
+```{r}
+# part a
+ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) + geom_point(size=3, color="orange") + scale_x_log10() + geom_smooth(method="lm", size=1.5)
+
+# part b
+ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp, color = continent)) + geom_point(size=3, pch=17) + scale_x_log10() + geom_smooth(method="lm", size=1.5)
+```
+
+# Exercise #5
+```{r}
+ggplot(data = gapminder, aes(x = gdpPercap, fill=continent)) + geom_density(alpha=0.6) + facet_wrap( ~ year) + scale_x_log10()
+```
+
