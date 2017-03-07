@@ -8,13 +8,13 @@ output: html_document
 ## Part 1: Canids Continued
 # Report on output
 # 1. What taxonomic group is displayed?
-#
+# The group is Cormocyon.
 # 2. How many unique fossil species are contained within it?
-#
+# There are two species: copei and haydeni.
 # 3. How many unique fossil genera?
-#
-# 4. What species has the longest
-#
+# There are 58 unique fossil genera within the file. 
+# 4. What species has the longest record?
+# Cormocyon copei has the longest record.
 
 
 ## Part 2: Data Frames
